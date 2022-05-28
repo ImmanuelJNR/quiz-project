@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="mother">
+        <div class="top">
+            <div class="project-description">
+                <h2>Skill Test</h2>
+                <p class="first-pi">check your skill level, By answering questions on any topic of your choice. So as to know the area of your skill to improve on</p>
+
+                <p class="second-pi">Test and improve your skill with this exercise</p>
+
+                
+            
+
+                
+            </div>
+            <div class="vector2-holder">
+                <img src="./image/testpics.png" class="vector2" alt="">
+            </div>
+
+        </div>
+        <hr>
+        <div class="btn-holder">
+            <button id="btn"  data-for="l1">Tech Careers</button>
+            <button id="btn"  data-for="l2">Education</button>
+            <button id="btn"  data-for="l3">Google Workspace</button>
+        </div>
+    
+        <h3>Recommended for you</h3>
+    
+        <section>
+
+                <div class="listsection active-list-section" id="l1">  
+                    <div class="line-up">
+                        <img src="./star.png" class="star-png" alt="">
+                        <p class="element" id="html">Hyper Text Markup Language (HTML)</p>
+                    </div>
+                    <div class="line-up">
+                        <img src="./star.png" class="star-png" alt="">
+                        <p class="element" id="css">Cascading Stylesheet (CSS)</p>
+                    </div>
+                    <div class="line-up">
+                        <img src="./star.png" class="star-png" alt="">
+                        <p class="element">Vanilla Javascript (JV)</p>
+                    </div>
+                    <div class="line-up">
+                        <img src="./star.png" class="star-png" alt="">
+                        <p class="element">React JS (Rjs)</p>
+                    </div>
+                    <div class="line-up">
+                        <img src="./star.png" class="star-png" alt="">
+                        <p class="element">Node JS(Njs)</p>
+                    </div>
+                    <div class="line-up">
+                        <img src="./star.png"class="star-png" alt="">
+                        <p class="element">Python(p)</p>
+                    </div>
+                    <div class="line-up">
+                        <img src="./star.png"class="star-png" alt="">
+                        <p class="element">Django(DJ)</p>
+                    </div>
+
+                </div>
+
+               <div class="listsection"  id="l2">
+                    <div class="line-up">
+                        <img src="./star.png" class="star-png" alt="">
+                        <p class="element">MATHEMATICS</p>
+                    </div>
+                    <div class="line-up">
+                        <img src="./star.png" class="star-png" alt="">
+                        <p class="element">PHYSICS</p>
+                    </div>
+                    <div class="line-up">
+                        <img src="./star.png" class="star-png" alt="">
+                        <p class="element">CHEMISTRY</p>
+                    </div>
+                    <div class="line-up">
+                        <img src="./star.png" class="star-png" alt="">
+                        <p class="element">BIOLOGY</p>
+                    </div>
+                    <div class="line-up">
+                        <img src="./star.png" class="star-png" alt="">
+                        <p class="element">ENGLISH</p>
+                    </div>
+                    <div class="line-up">
+                        <img src="./star.png"class="star-png" alt="">
+                        <p class="element">GOVERNMENT</p>
+                    </div>
+                    <div class="line-up">
+                        <img src="./star.png"class="star-png" alt="">
+                        <p class="element">LITTERITURE</p>
+                    </div>
+               </div>
+
+                <div class="listsection" id="l3">
+                    <div class="line-up">
+                        <img src="./star.png" class="star-png" alt="">
+                        <p class="element" id="htmls">Hyper Text Markup Language</p>
+                    </div>
+                    <div class="line-up">
+                        <img src="./star.png" class="star-png" alt="">
+                        <p class="element">Cascading Stylesheet</p>
+                    </div>
+                    <div class="line-up">
+                        <img src="./star.png" class="star-png" alt="">
+                        <p class="element">Vanilla Javascript</p>
+                    </div>
+                    <div class="line-up">
+                        <img src="./star.png" class="star-png" alt="">
+                        <p class="element">React JS</p>
+                    </div>
+                    <div class="line-up">
+                        <img src="./star.png" class="star-png" alt="">
+                        <p class="element">NodeJS</p>
+                    </div>
+                    <div class="line-up">
+                        <img src="./star.png"class="star-png" alt="">
+                        <p class="element">Python</p>
+                    </div>
+                    <div class="line-up">
+                        <img src="./star.png"class="star-png" alt="">
+                        <p class="element">Django(DJ)</p>
+                    </div>
+                </div>
+        </section>
+
+    </div>
+
+            
+    <script>
+        // let text = document.querySelectorAll(".element")
+        
+
+        let btns = document.querySelectorAll('#btn')
+        btns.forEach(btn => {
+            btn.onclick = displayMaster
+        })
+        let listSections =  document.querySelectorAll('.listsection')
+        function displayMaster(e){
+            let datafor = e.target.getAttribute('data-for')
+            let masterId = document.querySelector(`#${datafor}`)
+            console.log(masterId)
+
+            listSections.forEach(list => {
+                list.classList.remove('active-list-section')
+            })
+            masterId.classList.add('active-list-section')
+        }
+        
+
+       
+        // let all_Id = e.target.getAttribute("#")
+        // console.log(all_Id)
+    
+
+        //for each element clicked it redirects to the (test.html page)
+        let p = document.querySelectorAll(".element")
+        for(let pees of p)
+        console.log(pees)
+        
+        p.forEach(list=>{
+            list.addEventListener("click", redirect)
+        })
+        function redirect(e){
+            let choice = e.target.id || 'html'
+            console.log(choice)
+            sessionStorage.setItem('userchoice', choice)
+
+            // alert(choice)
+            window.location.href = "./test.html"
+        }
+
+    </script>
+
+</body>
+</html>
+
+
+
+        
+
+        
+
+        
+
+        
+
+        
+    
+        
+
+    

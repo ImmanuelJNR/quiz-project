@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./result.css">
+</head>
+<body>
+    <img src="./correct.png" class="correct" height="20px" width="20px" alt="">
+    <img src="./wrong.png" class="wrong" height="20px" width="20px" alt="">
+    <h2>Quiz Result</h2>
+    <table>
+        <tr>
+            <th>S/N</th>
+            <th class="question">Question</th>
+            <th>Answer</th>
+            <th>Remark</th>
+        </tr>
+        <tr>
+            <td class="index">1</td>
+            <td class="question"></td>
+            <td class="answer"></td>
+            <td class="remark"></td>
+        </tr>
+        <tr>
+            <td class="index">2</td>
+            <td class="question"></td>
+            <td class="answer"></td>
+            <td class="remark"></td>
+        </tr>
+        <tr>
+            <td class="index">3</td>
+            <td class="question"></td>
+            <td class="answer"></td>
+            <td class="remark"></td>
+        </tr>
+        <tr>
+            <td class="index">4</td>
+            <td class="question"></td>
+            <td class="answer"></td>
+            <td class="remark"></td>
+        </tr>
+        <tr>
+            <td class="index">5</td>
+            <td class="question"></td>
+            <td class="answer"></td>
+            <td class="remark"></td>
+        </tr>
+        <tr>
+            <td class="index">6</td>
+            <td class="question"></td>
+            <td class="answer"></td>
+            <td class="remark"></td>
+        </tr>
+        <tr>
+            <td class="index">7</td>
+            <td class="question"></td>
+            <td class="answer"></td>
+            <td class="remark"></td>
+        </tr>
+        <tr>
+            <td class="index">8</td>
+            <td class="question"></td>
+            <td class="answer"></td>
+            <td class="remark"><img src="./correct.png" alt=""></td>
+        </tr>
+        <tr>
+            <td class="index">9</td>
+            <td class="question"></td>
+            <td class="answer"></td>
+            <td class="remark"><img src="./wrong.png" alt=""></td>
+        </tr>
+        <tr>
+            <td class="index">10</td>
+            <td class="question"></td>
+            <td class="answer"></td>
+            <td class="remark"></td>
+        </tr>
+    </table>
+
+    <script>
+        let storage = sessionStorage.getItem("answered_idxs")
+        let correct = document.querySelector(".correct")
+        let wrong = document.querySelector(".wrong")
+        console.log(correct)
+
+    </script>
+</body>
+</html>

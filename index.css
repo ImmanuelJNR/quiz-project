@@ -1,0 +1,227 @@
+/* :root{
+    --silver: ;
+} */
+
+body{
+    margin: o;
+    background-color: rgba(0,0,0,0.08);
+    display: flex;
+    justify-content: center;
+}
+.mother{
+    margin: 0;
+    margin-top: 0;
+    width: 900px;
+    background-color: white;
+
+}
+.vector2{
+    width: 130px;
+    margin-top: 10px;
+}
+
+.project-description{
+    /* border: 1px solid blue; */
+    width: 50%;
+}
+.btn-holder{
+    margin-left: 80px;
+    
+}
+
+button{
+    /* width: 7.5rem; */
+    height: 2.5rem;
+    border-radius: 20px;
+    font-size: 1em;
+    border: 1px solid grey;
+    background-color: transparent;
+    font-weight: bold;
+    color: gray;
+}
+button:active{
+    background: blue;
+}
+
+button:hover{
+    background-color: rgb(212, 210, 210);
+    border: 3px solid grey;
+}
+
+
+h2{
+    margin: 0;
+    margin-top: 15px;
+    font-size: 2.5rem;
+    font-family: sans-serif;
+}
+
+.first-pi{
+    font-family: Georgia;
+
+}
+
+.second-pi{
+    display: none;
+}
+
+.vector{
+    display: none;
+}
+
+h3{
+    margin: 0;
+    margin-top: 20px;
+    text-align: center;
+    font-family: Georgia;
+    text-transform: uppercase;
+}
+
+.listsection{
+    display: none;
+    margin-left: 50px;
+
+}
+
+.active-list-section{
+    display: block;
+}
+
+
+
+
+.line-up{
+    display: flex;
+    border-bottom: 1px solid silver;
+    
+}
+
+.element:hover{
+    text-decoration: underline;
+    color: blue;
+}
+
+/* li{
+    padding: 20px;
+    margin: 0;
+} */
+
+.element{
+    font-family: Georgia;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* .active-element{
+    display: block;
+} */
+
+.star-png{
+    width: 5rem;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+.top{
+    display: flex;
+    justify-content: space-around;
+}
+
+@media screen and (max-width: 768px){
+    .mother{
+        width: 100%;
+    }
+
+    .project-description{
+        /* border: 1px solid blue; */
+        width: 450px;
+    }
+
+    .vector{
+        display: none;
+    }
+
+    .btn-holder{
+        margin-left: 50px;
+    }
+}
+
+@media screen and (max-width: 425px){
+    body{
+        background-color: white;
+    }
+
+
+    .mother{
+        width: 100%;
+        background-color: none;
+    }
+
+    .first-pi{
+        display: none;
+    }
+
+    .second-pi{
+        font-family: Georgia;
+        display: block;
+        /* margin-top: 0; */
+    }
+
+
+    .project-description{
+        width: none;
+    }
+    
+    
+    
+    
+    .top{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    hr{
+        display: none;
+    }
+
+    .button-div{
+        display: none;
+    }
+
+    .list-section{
+        margin-left: 0;
+    }
+
+    .btn-holder{
+        margin-left: 0;
+    }
+
+    .star-png{
+        /* width: 20px; */
+        margin: 0;
+        padding: 0;
+    }
+
+    
+
+    @media screen and (max-width: 320px){
+        .star-png{
+            display: none;
+        }
+
+    }
+
+    
+}
+
+
+
+
+
+
+

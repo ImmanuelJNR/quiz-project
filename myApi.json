@@ -1,0 +1,105 @@
+[
+   {
+      "question" : "The folowing tags are singleton tags excepts?",
+      "ans" : "b",
+      "category" : "Hyper Text Markup Language(HTML)",
+      "id": "html", 
+      "a" : "<meta>",
+      "b" : "<map>",
+      "c" : "<link>",
+      "d" : "<hr>"
+    },
+  
+  {
+      "question" : "which of the following tags is not supported in HTML5",
+      "ans" : "a",
+      "category" : "Hyper Text Markup Language(HTML)",
+      "id": "html",  
+      "a" : "<dir>",
+      "b" : "<acronym>",
+      "c" : "<center>",
+      "d" : "<code>"
+    },
+    
+    
+   {
+        "question" : "canvas element are used to draw graphics through_____",
+        "ans" : "a",
+        "category" : "html",
+        "id": "css",  
+        "a" : "scripting",
+        "b" : "styling",
+        "c" : "prototyping",
+        "d" : "illustrations"
+    },
+   {
+        "question" : "What is the function of href attribute",
+        "ans" : "a",
+        "category" : "Hyper Text Markup Language(HTML)",
+        "id": "html",  
+        "a" : " specifies the URL of the page the link goes to",
+        "b" : "it as not an attribute",
+        "c" : "it is used for images",
+        "d" : "None of the above"
+    },
+   {
+        "question" : "where is the right place for a meta to be written",
+        "ans" : "c",
+        "category" : "Hyper Text Markup Language(HTML)",
+        "id": "html",  
+        "a" : "body tag",
+        "b" : "footer tag",
+        "c" : "head tag",
+        "d" : "main tag"
+    },
+   {
+        "question" : "Why is html not knomn as a programming language",
+        "ans" : "a",
+        "category" : "Hyper Text Markup Language(HTML)", 
+        "id": "html", 
+        "a" : "scripting",
+        "b" : "styling",
+        "c" : "prototyping",
+        "d" : "illustrations"
+    },
+   {
+        "question" : "canvas element are used to draw graphics through_____",
+        "ans" : "a",
+        "category" : "Hyper Text Markup Language(HTML)",
+        "id": "html",  
+        "a" : "scripting",
+        "b" : "styling",
+        "c" : "prototyping",
+        "d" : "illustrations"
+    },
+   {
+        "question" : "canvas element are used to draw graphics through_____",
+        "ans" : "a",
+        "category" : "Hyper Text Markup Language(HTML)",
+        "id": "html",  
+        "a" : "scripting",
+        "b" : "styling",
+        "c" : "prototyping",
+        "d" : "illustrations"
+    },
+   {
+        "question" : "canvas element are used to draw graphics through_____",
+        "ans" : "a",
+        "category" : "Hyper Text Markup Language(HTML)",
+        "id": "html",  
+        "a" : "scripting",
+        "b" : "styling",
+        "c" : "prototyping",
+        "d" : "illustrations"
+    },
+   {
+        "question" : "canvas element are used to draw graphics through_____",
+        "ans" : "a",
+        "category" : "html",
+        "id": "css",  
+        "a" : "scripting",
+        "b" : "styling",
+        "c" : "prototyping",
+        "d" : "illustrations"
+    }
+]

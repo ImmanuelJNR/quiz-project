@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./test.css">
+</head>
+<body>
+    <section>
+        
+        <div class="container">
+            <div class="first-section">
+                
+                <header class="show-question-holder">
+                    <img src="./exit.png" alt="">
+                    <h2>Google Workspace</h2>
+                </header>
+                <div class="demarcation"></div>
+                
+                <div class="showquestion"></div>
+            </div>
+            
+        </div>
+        <div class="view">
+            
+            
+            
+            <div class="choose-options">
+                <div class="option-holder">
+                    <input type="radio" id="a" name="answer" >
+                    <label for="answer" class="a" ></label>
+                    
+                </div>
+                <div class="option-holder">
+                    <input type="radio" id="b" name="answer" >
+                    <label for="answer" class="b"></label>
+                
+                </div>
+                <div class="option-holder">
+                    <input type="radio" id="c" name="answer" >
+                    <label for="answer" class="c"></label>
+                    
+                </div>
+                <div class="option-holder">
+                    <input type="radio" id="d" name="answer" >
+                    <label for="answer" class="d"></label>
+                    
+                </div>
+            </div>
+
+
+            
+        </div>
+        <footer>
+            <div class="question-counts"></div>
+            <button class="btn-next">NEXT</button>
+        </footer>
+    </section>
+
+    <script>
+        let choice = sessionStorage.getItem('userchoice') || 'html'
+        
+        console.log(choice)
+        
+        
+        
+        // fetching data from API
+        let holdData = null
+        async function selectQuest(){
+            let apiData = await fetch("./myApi.json")
+            if(apiData.ok){
+                let JsonFormat = await apiData.json()
+                let cleaned_data = JsonFormat.filter(data => data.id === choice)
+                console.log(cleaned_data)
+                holdData = cleaned_data
+                
+                Display_quest(cleaned_data)
+            }
+            
+        }
+        selectQuest()
+        
+        let answered = 0
+        let answered_idxs = []
+
+        console.log(answered_idxs)
+         let storage = sessionStorage.setItem("set_index",answered_idxs)
+        
+        function Display_quest(JsonFormat){
+            let currIndex = Math.floor(Math.random()* holdData.length)
+
+             
+
+            // Causes question count to change (increase)
+            let counts = document.querySelector(".question-counts")
+            answered += 1
+            counts.innerText = answered + ' of ' + holdData.length
+
+            //  You are sure current idx holds an idx that hasn't been answered
+            while (answered_idxs.includes(currIndex)){
+                currIndex = Math.floor(Math.random()* holdData.length)   
+            }
+            answered_idxs.push(currIndex)
+
+
+            
+                
+                        
+            // filling up the question box with questions
+            console.log(currIndex)
+            let currAns = ''
+            let currQuest = JsonFormat[currIndex]
+            let quest_box = document.querySelector('.showquestion')
+            let que = currQuest.question
+            quest_box.innerText = currQuest.question
+
+            // filling up the header
+            let header = document.querySelector("h2")
+            header.innerText = currQuest.category
+            
+
+            // filling up answers 
+            let a = document.querySelector(".a")
+            a.innerText = currQuest.a
+
+            let b = document.querySelector(".b")
+            b.innerText = currQuest.b
+
+            let c = document.querySelector(".c")
+            c.innerText = currQuest.c
+            
+            let d = document.querySelector(".d")
+            d.innerText = currQuest.d
+            
+            
+        }
+
+        
+
+          
+        
+        
+    
+        
+        // adding an onclick to the radio input so that the id can be targeted
+        let inputs = document.querySelectorAll("input")
+        console.log(inputs)
+        
+        inputs.forEach(input=>{
+            input.onclick = check
+            
+        })
+        
+        //checking if the peson is corect
+        function check(e){
+            let choose = e.target.id
+            console.log(choose)
+            let click = choose
+            //    console.log(choose)
+            //    checking if answer is correct
+            if(choose === currQuest.ans){
+                alert ("you are correct") 
+                
+            }
+               
+        }
+        
+
+        // function for the next button
+        let button = document.querySelector(".btn-next")
+        button.addEventListener("click", forward_next_quest)
+    
+        function forward_next_quest(e){
+            Display_quest(holdData)
+            // Check if all questions have been answered
+            if(answered_idxs.length === holdData.length){
+            let quest_box = document.querySelector('.showquestion')
+                // quest_box.classList.remove(".showquestion")
+                quest_box.classList.add("view-result")
+                quest_box.innerHTML = `<p>You have come to the end of the test click <a href="./result.html">here</a> to view result</p>`
+                
+            }  
+        }
+
+        
+        // checking if the options has been choose
+        // function check_choose(){
+            // let valid = false
+            // let get = document.querySelectorAll("input")
+
+            // for(let i=0; i<input.length; i++){
+            //     if(x[i].checked){
+            //         valid=true
+            //         break
+            //     }
+            // }
+
+
+            // if(valid){
+                 
+            // }else{
+            //     alert('please select')
+            // }
+
+        // }
+        
+        </script>
+    </body>
+    </html>
+    
+
+        
+
+       
+
+            
+
+
+
+            
+            
+                
+
+            
+
+
+
+        
+        

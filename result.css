@@ -1,0 +1,12 @@
+table,th,td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    height: 40px;
+}
+.question{
+    width: 300px;
+}
+
+.answer{
+    width: 200px;
+}
